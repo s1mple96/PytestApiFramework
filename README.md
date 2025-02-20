@@ -41,15 +41,16 @@ db_password = 'your_password'
 db_host = 'your_host'
 db_database = 'your_database'
 db_port = 3306
-
+```
 接口地址等其他配置
+```
 api_base_url = 'https://www.example.com'
 ```
 
 ### 使用方法
 ### 编写测试用例
-```
 在 testcases 目录下创建或修改 YAML 格式的测试用例文件，示例如下：
+```
 - name: 我要咨询接口测试
   request:
     method: POST
@@ -114,10 +115,13 @@ api_base_url = 'https://www.example.com'
   validate:
     - equals:
         - 200
-        - status_code`
+        - status_code
+```
+
 ### 变量提取与使用
 支持从请求响应中提取变量，并在后续的测试用例中使用。在 YAML 文件中使用 extract 字段定义要提取的变量，示例如下：
-`- name: 变量提取测试示例
+```
+- name: 变量提取测试示例
   request:
     method: POST
     url: /ajax.php?mod=online_order&code=submit
