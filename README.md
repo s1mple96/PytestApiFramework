@@ -28,8 +28,7 @@ api_frame/
 ## 环境要求
 - **Python 版本**：Python 3.7 及以上
 - **依赖库**：在项目根目录下的 `requirements.txt` 文件中列出了所有依赖库，可使用以下命令进行安装：
-
-```pip install -r requirements.txt```
+    ```pip install -r requirements.txt```
 
 ### 配置说明
 
