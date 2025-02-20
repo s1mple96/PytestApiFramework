@@ -13,6 +13,9 @@ class ExtractUtil:
     """
     专门用来接口关联的类，负责解析提取变量和替换变量值。
     """
+    def __init__(self, response=None):
+        self.response = response #status_code headers text、json elapsed cookies history
+
     def extract(self, res, var_name, attr_name, expr: str, index):
         """
         从请求返回结果中提取数据并更新到 YAML 文件。
@@ -124,8 +127,12 @@ class ExtractUtil:
         """
         # 定义正则表达式匹配函数调用表达式
         regexp = r"\$\{(.*?)\((.*?)\)\}"
+        # 定义正则表达式匹配 response 对象属性引用
+        response_regexp = r"\$\{response\.(\w+)\}"
+
         # 通过正则表达式在 data_str 字符串中匹配，得到所有的表达式列表
         fun_list = re.findall(regexp, data_str)
+        response_list = re.findall(response_regexp, data_str)
 
         for f in fun_list:
             try:
@@ -144,6 +151,17 @@ class ExtractUtil:
                 data_str = data_str.replace(old_value, str(new_value))
             except Exception as e:
                 self._log_error(f"热加载替换时调用 {f[0]} 函数出错: {e}")
+
+        for attr in response_list:
+            try:
+                if self.response and hasattr(self.response, attr):
+                    new_value = getattr(self.response, attr)
+                    old_value = f"${{response.{attr}}}"
+                    data_str = data_str.replace(old_value, str(new_value))
+                else:
+                    self._log_error(f"响应对象没有 |{attr}| 属性或响应对象未设置")
+            except Exception as e:
+                self._log_error(f"替换 response 对象属性 |{attr}| 时出错: {e}")
 
         return data_str
 

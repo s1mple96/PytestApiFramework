@@ -21,4 +21,4 @@ global_args={
 extract_name = "extract.yaml"
 
 # allure项目名称
-allure_project_name = "测试项目:s1mple"
+allure_project_name = "XXXX电商接口自动化测试平台:欧莎"

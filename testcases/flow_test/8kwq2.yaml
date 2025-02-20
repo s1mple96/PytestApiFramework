@@ -18,8 +18,9 @@
       source_url: https://www.8kqw.com/
   extract:
     msg: [ json,"$.msg",0 ]
+#    status: [json,"$.status",0]
   validate:
     equals:
       判断响应状态码为200: [ 200,status_code ]
 #      判断json响应状态码为40004: [ 40004,"${read_yaml(status)}" ]
-#      判断json响应状态码为msg: [ 您操作过于频繁，请稍后再试试！,"${read_yaml(msg)}" ]
+      判断json响应状态码为msg: [ 您操作过于频繁，请稍后再试试！,"${read_yaml(msg)}" ]

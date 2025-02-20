@@ -21,7 +21,7 @@
   validate:
     equals:
       判断响应状态码为200: [ 200,status_code ]
-#      判断json响应状态码为40004: [ 40004,"${read_yaml(status)}" ]
+#      判断json响应状态码为20000: [ 20000,"${read_yaml(status)}" ]
 #      判断json响应状态码为msg: [ 您操作过于频繁，请稍后再试试！,"${read_yaml(msg)}" ]
 
 - feature: 流程用例

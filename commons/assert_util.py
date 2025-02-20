@@ -55,13 +55,13 @@ class AssertUtil:
         :param sj: 属性名
         :return: 属性值
         """
-        logger.info(f"尝试获取响应对象的 {sj} 属性值")
+        logger.info(f"尝试获取响应对象的 |{sj}| 属性值")
         try:
             value = getattr(res, sj)
-            logger.info(f"成功获取响应对象的 {sj} 属性值: {value}")
+            logger.info(f"成功获取响应对象的 |{sj}| 属性值: |{value}|")
             return value
         except AttributeError:
-            logger.warning(f"响应对象没有 {sj} 属性，返回属性名本身")
+            logger.warning(f"响应对象没有 |{sj}| 属性，返回属性名本身")
             return sj
 
     def _perform_assertion(self, assert_type, yq, sj_value, msg):
@@ -128,7 +128,7 @@ class AssertUtil:
             logger.info("成功将响应内容转换为 JSON 格式")
         except Exception:
             new_res.json = {"msg": 'response not json data'}
-            error_msg = f"将响应内容转换为 JSON 格式时出错，当前已将响应 JSON 内容设为: {new_res.json}"
+            error_msg = f"将响应内容转换为 JSON 格式时出错，当前已将响应 JSON 内容设为: |{new_res.json}|"
             logger.error(error_msg)
             raise Exception(error_msg)
 
@@ -138,6 +138,6 @@ class AssertUtil:
             try:
                 self._perform_assertion(assert_type, yq, sj_value, msg)
             except AssertionError as e:
-                error_msg = f"{msg} 断言失败，预期值：{yq}，实际值：{sj_value}"
+                error_msg = f"{msg} 断言失败，预期值：|{yq}|，实际值：|{sj_value}|"
                 logger.error(error_msg)
                 raise AssertionError(error_msg)
