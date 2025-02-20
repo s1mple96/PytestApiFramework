@@ -7,7 +7,7 @@
 ```
 api_frame/
 ├── testcases/ # 存放测试用例的 YAML 文件
-│ ├── flow_test  #流程用例文件夹
+│ ├── flow_test  #流程测试用例文件夹
 │ ├── single_test #单接口测试用例文件
 │ └── ddt_test    #数据驱动测试用例文件夹
 ├── commons/ # 通用工具类和方法
@@ -47,7 +47,7 @@ db_port = 3306
 api_base_url = 'https://www.example.com'
 ```
 
-### 使用方法
+## 使用方法
 ### 编写测试用例
 在 testcases 目录下创建或修改 YAML 格式的测试用例文件，示例如下：
 ```
