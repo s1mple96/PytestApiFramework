@@ -18,7 +18,7 @@ global_args={
 }
 
 #保存中间变量的文件名
-extract_name = "extract_yaml"
+extract_name = "extract.yaml"
 
 # allure项目名称
 allure_project_name = "测试项目:s1mple"

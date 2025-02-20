@@ -1,77 +1,77 @@
-20:41:31 -- INFO -- ddt_util.py -- 开始读取 YAML 文件: D:\Github\api_frame\testcases\flow_test\8kwq.yaml
-20:41:31 -- INFO -- ddt_util.py -- YAML 文件中有多个用例，返回用例列表: D:\Github\api_frame\testcases\flow_test\8kwq.yaml
-20:41:31 -- INFO -- ddt_util.py -- 开始读取 YAML 文件: D:\Github\api_frame\testcases\flow_test\8kwq2.yaml
-20:41:31 -- INFO -- ddt_util.py -- YAML 文件中只有一个非数据驱动用例，返回该用例: D:\Github\api_frame\testcases\flow_test\8kwq2.yaml
-20:41:31 -- INFO -- ddt_util.py -- 开始读取 YAML 文件: D:\Github\api_frame\testcases\flow_test\8kwq3.yaml
-20:41:31 -- INFO -- ddt_util.py -- YAML 文件中只有一个非数据驱动用例，返回该用例: D:\Github\api_frame\testcases\flow_test\8kwq3.yaml
-20:41:31 -- INFO -- conftest.py -- 成功清空 extract.yaml 文件。
-20:41:31 -- INFO -- main_util.py -- 模块: 流程用例 | 接口: 我要咨询 | 用例: 我要咨询
-20:41:31 -- INFO -- requests_util.py -- 请求params: {'application': 'app', 'application_client_type': 'h5'}
-20:41:31 -- INFO -- requests_util.py -- 请求data: {'mobile': '13526997240', 'name': '孙刚', 'response': 'json', 'source': 'bkq_pc_loan', 'source_url': 'https://www.8kqw.com/', 'submit': 'sign_bkqw_pc_loan'}
-20:41:31 -- INFO -- requests_util.py -- 请求headers: {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'www.8kqw.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'}
-20:41:31 -- INFO -- requests_util.py -- 请求method: POST
-20:41:31 -- INFO -- requests_util.py -- 请求url: https://www.8kqw.com/ajax.php?mod=online_order&code=submit
-20:41:32 -- INFO -- requests_util.py -- 响应状态码: 200
-20:41:32 -- INFO -- requests_util.py -- JSON数据是{'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- requests_util.py -- 响应数据: {'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- yaml_util.py -- 成功将数据写入 extract.yaml 文件: {'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- assert_util.py -- 开始执行 equals 断言用例
-20:41:32 -- INFO -- assert_util.py -- 成功将响应内容转换为 JSON 格式
-20:41:32 -- INFO -- assert_util.py -- 尝试获取响应对象的 status_code 属性值
-20:41:32 -- INFO -- assert_util.py -- 成功获取响应对象的 status_code 属性值: 200
-20:41:32 -- INFO -- assert_util.py -- 开始执行 equals 断言，预期值: 200，实际值: 200
-20:41:32 -- INFO -- assert_util.py -- 判断响应状态码为200 断言成功，预期值: 200，实际值: 200
-20:41:32 -- INFO -- main_util.py -- 模块: 流程用例 | 接口: 我要咨询 | 用例: 我要咨询
-20:41:32 -- INFO -- requests_util.py -- 请求params: {'application': 'app', 'application_client_type': 'h5'}
-20:41:32 -- INFO -- requests_util.py -- 请求data: {'mobile': '13622111967', 'name': '郭华', 'response': 'json', 'source': 'bkq_pc_loan', 'source_url': 'https://www.8kqw.com/', 'submit': 'sign_bkqw_pc_loan'}
-20:41:32 -- INFO -- requests_util.py -- 请求headers: {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'www.8kqw.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'}
-20:41:32 -- INFO -- requests_util.py -- 请求method: POST
-20:41:32 -- INFO -- requests_util.py -- 请求url: https://www.8kqw.com/ajax.php?mod=online_order&code=submit
-20:41:32 -- INFO -- requests_util.py -- 响应状态码: 200
-20:41:32 -- INFO -- requests_util.py -- JSON数据是{'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- requests_util.py -- 响应数据: {'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- yaml_util.py -- 成功将数据写入 extract.yaml 文件: {'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- assert_util.py -- 开始执行 equals 断言用例
-20:41:32 -- INFO -- assert_util.py -- 成功将响应内容转换为 JSON 格式
-20:41:32 -- INFO -- assert_util.py -- 尝试获取响应对象的 status_code 属性值
-20:41:32 -- INFO -- assert_util.py -- 成功获取响应对象的 status_code 属性值: 200
-20:41:32 -- INFO -- assert_util.py -- 开始执行 equals 断言，预期值: 200，实际值: 200
-20:41:32 -- INFO -- assert_util.py -- 判断响应状态码为200 断言成功，预期值: 200，实际值: 200
-20:41:32 -- INFO -- conftest.py -- 测试用例 test_8kwq[caseinfo0] 执行完毕
+21:00:57 -- INFO -- ddt_util.py -- 开始读取 YAML 文件: D:\Github\api_frame\testcases\flow_test\8kwq.yaml
+21:00:57 -- INFO -- ddt_util.py -- YAML 文件中有多个用例，返回用例列表: D:\Github\api_frame\testcases\flow_test\8kwq.yaml
+21:00:57 -- INFO -- ddt_util.py -- 开始读取 YAML 文件: D:\Github\api_frame\testcases\flow_test\8kwq2.yaml
+21:00:57 -- INFO -- ddt_util.py -- YAML 文件中只有一个非数据驱动用例，返回该用例: D:\Github\api_frame\testcases\flow_test\8kwq2.yaml
+21:00:57 -- INFO -- ddt_util.py -- 开始读取 YAML 文件: D:\Github\api_frame\testcases\flow_test\8kwq3.yaml
+21:00:57 -- INFO -- ddt_util.py -- YAML 文件中只有一个非数据驱动用例，返回该用例: D:\Github\api_frame\testcases\flow_test\8kwq3.yaml
+21:00:57 -- INFO -- conftest.py -- 成功清空 extract.yaml 文件。
+21:00:57 -- INFO -- main_util.py -- 模块: 流程用例 | 接口: 我要咨询 | 用例: 我要咨询
+21:00:57 -- INFO -- requests_util.py -- 请求params: {'application': 'app', 'application_client_type': 'h5'}
+21:00:57 -- INFO -- requests_util.py -- 请求data: {'mobile': '18552819985', 'name': '张丽娟', 'response': 'json', 'source': 'bkq_pc_loan', 'source_url': 'https://www.8kqw.com/', 'submit': 'sign_bkqw_pc_loan'}
+21:00:57 -- INFO -- requests_util.py -- 请求headers: {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'www.8kqw.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'}
+21:00:57 -- INFO -- requests_util.py -- 请求method: POST
+21:00:57 -- INFO -- requests_util.py -- 请求url: https://www.8kqw.com/ajax.php?mod=online_order&code=submit
+21:00:57 -- INFO -- requests_util.py -- 响应状态码: 200
+21:00:57 -- INFO -- requests_util.py -- JSON数据是{'status': 20000, 'msg': '申请成功，我们会尽快与您取得联系！'}
+21:00:57 -- INFO -- requests_util.py -- 响应数据: {'status': 20000, 'msg': '申请成功，我们会尽快与您取得联系！'}
+21:00:57 -- INFO -- yaml_util.py -- 成功将数据写入 extract.yaml 文件: {'msg': '申请成功，我们会尽快与您取得联系！'}
+21:00:57 -- INFO -- assert_util.py -- 开始执行 equals 断言用例
+21:00:57 -- INFO -- assert_util.py -- 成功将响应内容转换为 JSON 格式
+21:00:57 -- INFO -- assert_util.py -- 尝试获取响应对象的 status_code 属性值
+21:00:57 -- INFO -- assert_util.py -- 成功获取响应对象的 status_code 属性值: 200
+21:00:57 -- INFO -- assert_util.py -- 开始执行 equals 断言，预期值: 200，实际值: 200
+21:00:57 -- INFO -- assert_util.py -- 判断响应状态码为200 断言成功，预期值: 200，实际值: 200
+21:00:57 -- INFO -- main_util.py -- 模块: 流程用例 | 接口: 我要咨询 | 用例: 我要咨询
+21:00:57 -- INFO -- requests_util.py -- 请求params: {'application': 'app', 'application_client_type': 'h5'}
+21:00:57 -- INFO -- requests_util.py -- 请求data: {'mobile': '14706557956', 'name': '许璐', 'response': 'json', 'source': 'bkq_pc_loan', 'source_url': 'https://www.8kqw.com/', 'submit': 'sign_bkqw_pc_loan'}
+21:00:57 -- INFO -- requests_util.py -- 请求headers: {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'www.8kqw.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'}
+21:00:57 -- INFO -- requests_util.py -- 请求method: POST
+21:00:57 -- INFO -- requests_util.py -- 请求url: https://www.8kqw.com/ajax.php?mod=online_order&code=submit
+21:00:58 -- INFO -- requests_util.py -- 响应状态码: 200
+21:00:58 -- INFO -- requests_util.py -- JSON数据是{'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- requests_util.py -- 响应数据: {'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- yaml_util.py -- 成功将数据写入 extract.yaml 文件: {'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- assert_util.py -- 开始执行 equals 断言用例
+21:00:58 -- INFO -- assert_util.py -- 成功将响应内容转换为 JSON 格式
+21:00:58 -- INFO -- assert_util.py -- 尝试获取响应对象的 status_code 属性值
+21:00:58 -- INFO -- assert_util.py -- 成功获取响应对象的 status_code 属性值: 200
+21:00:58 -- INFO -- assert_util.py -- 开始执行 equals 断言，预期值: 200，实际值: 200
+21:00:58 -- INFO -- assert_util.py -- 判断响应状态码为200 断言成功，预期值: 200，实际值: 200
+21:00:58 -- INFO -- conftest.py -- 测试用例 test_8kwq[caseinfo0] 执行完毕
 
-20:41:32 -- INFO -- main_util.py -- 模块: 流程用例 | 接口: 我要咨询 | 用例: 我要咨询
-20:41:32 -- INFO -- requests_util.py -- 请求params: {'application': 'app', 'application_client_type': 'h5'}
-20:41:32 -- INFO -- requests_util.py -- 请求data: {'mobile': '13075437107', 'name': '杨军', 'response': 'json', 'source': 'bkq_pc_loan', 'source_url': 'https://www.8kqw.com/', 'submit': 'sign_bkqw_pc_loan'}
-20:41:32 -- INFO -- requests_util.py -- 请求headers: {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'www.8kqw.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'}
-20:41:32 -- INFO -- requests_util.py -- 请求method: POST
-20:41:32 -- INFO -- requests_util.py -- 请求url: https://www.8kqw.com/ajax.php?mod=online_order&code=submit
-20:41:32 -- INFO -- requests_util.py -- 响应状态码: 200
-20:41:32 -- INFO -- requests_util.py -- JSON数据是{'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- requests_util.py -- 响应数据: {'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- yaml_util.py -- 成功将数据写入 extract.yaml 文件: {'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- assert_util.py -- 开始执行 equals 断言用例
-20:41:32 -- INFO -- assert_util.py -- 成功将响应内容转换为 JSON 格式
-20:41:32 -- INFO -- assert_util.py -- 尝试获取响应对象的 status_code 属性值
-20:41:32 -- INFO -- assert_util.py -- 成功获取响应对象的 status_code 属性值: 200
-20:41:32 -- INFO -- assert_util.py -- 开始执行 equals 断言，预期值: 200，实际值: 200
-20:41:32 -- INFO -- assert_util.py -- 判断响应状态码为200 断言成功，预期值: 200，实际值: 200
-20:41:32 -- INFO -- conftest.py -- 测试用例 test_8kwq2[caseinfo0] 执行完毕
+21:00:58 -- INFO -- main_util.py -- 模块: 流程用例 | 接口: 我要咨询 | 用例: 我要咨询
+21:00:58 -- INFO -- requests_util.py -- 请求params: {'application': 'app', 'application_client_type': 'h5'}
+21:00:58 -- INFO -- requests_util.py -- 请求data: {'mobile': '18988088578', 'name': '彭亮', 'response': 'json', 'source': 'bkq_pc_loan', 'source_url': 'https://www.8kqw.com/', 'submit': 'sign_bkqw_pc_loan'}
+21:00:58 -- INFO -- requests_util.py -- 请求headers: {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'www.8kqw.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'}
+21:00:58 -- INFO -- requests_util.py -- 请求method: POST
+21:00:58 -- INFO -- requests_util.py -- 请求url: https://www.8kqw.com/ajax.php?mod=online_order&code=submit
+21:00:58 -- INFO -- requests_util.py -- 响应状态码: 200
+21:00:58 -- INFO -- requests_util.py -- JSON数据是{'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- requests_util.py -- 响应数据: {'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- yaml_util.py -- 成功将数据写入 extract.yaml 文件: {'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- assert_util.py -- 开始执行 equals 断言用例
+21:00:58 -- INFO -- assert_util.py -- 成功将响应内容转换为 JSON 格式
+21:00:58 -- INFO -- assert_util.py -- 尝试获取响应对象的 status_code 属性值
+21:00:58 -- INFO -- assert_util.py -- 成功获取响应对象的 status_code 属性值: 200
+21:00:58 -- INFO -- assert_util.py -- 开始执行 equals 断言，预期值: 200，实际值: 200
+21:00:58 -- INFO -- assert_util.py -- 判断响应状态码为200 断言成功，预期值: 200，实际值: 200
+21:00:58 -- INFO -- conftest.py -- 测试用例 test_8kwq2[caseinfo0] 执行完毕
 
-20:41:32 -- INFO -- main_util.py -- 模块: 流程用例 | 接口: 我要咨询 | 用例: 我要咨询
-20:41:32 -- INFO -- requests_util.py -- 请求params: {'application': 'app', 'application_client_type': 'h5'}
-20:41:32 -- INFO -- requests_util.py -- 请求data: {'mobile': '15214480960', 'name': '徐磊', 'response': 'json', 'source': 'bkq_pc_loan', 'source_url': 'https://www.8kqw.com/', 'submit': 'sign_bkqw_pc_loan'}
-20:41:32 -- INFO -- requests_util.py -- 请求headers: {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'www.8kqw.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'}
-20:41:32 -- INFO -- requests_util.py -- 请求method: POST
-20:41:32 -- INFO -- requests_util.py -- 请求url: https://www.8kqw.com/ajax.php?mod=online_order&code=submit
-20:41:32 -- INFO -- requests_util.py -- 响应状态码: 200
-20:41:32 -- INFO -- requests_util.py -- JSON数据是{'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- requests_util.py -- 响应数据: {'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- yaml_util.py -- 成功将数据写入 extract.yaml 文件: {'msg': '您操作过于频繁，请稍后再试试！'}
-20:41:32 -- INFO -- assert_util.py -- 开始执行 equals 断言用例
-20:41:32 -- INFO -- assert_util.py -- 成功将响应内容转换为 JSON 格式
-20:41:32 -- INFO -- assert_util.py -- 尝试获取响应对象的 status_code 属性值
-20:41:32 -- INFO -- assert_util.py -- 成功获取响应对象的 status_code 属性值: 200
-20:41:32 -- INFO -- assert_util.py -- 开始执行 equals 断言，预期值: 200，实际值: 200
-20:41:32 -- INFO -- assert_util.py -- 判断响应状态码为200 断言成功，预期值: 200，实际值: 200
-20:41:32 -- INFO -- conftest.py -- 测试用例 test_8kwq3[caseinfo0] 执行完毕
+21:00:58 -- INFO -- main_util.py -- 模块: 流程用例 | 接口: 我要咨询 | 用例: 我要咨询
+21:00:58 -- INFO -- requests_util.py -- 请求params: {'application': 'app', 'application_client_type': 'h5'}
+21:00:58 -- INFO -- requests_util.py -- 请求data: {'mobile': '15737304242', 'name': '李倩', 'response': 'json', 'source': 'bkq_pc_loan', 'source_url': 'https://www.8kqw.com/', 'submit': 'sign_bkqw_pc_loan'}
+21:00:58 -- INFO -- requests_util.py -- 请求headers: {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': 'www.8kqw.com', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'}
+21:00:58 -- INFO -- requests_util.py -- 请求method: POST
+21:00:58 -- INFO -- requests_util.py -- 请求url: https://www.8kqw.com/ajax.php?mod=online_order&code=submit
+21:00:58 -- INFO -- requests_util.py -- 响应状态码: 200
+21:00:58 -- INFO -- requests_util.py -- JSON数据是{'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- requests_util.py -- 响应数据: {'status': 40004, 'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- yaml_util.py -- 成功将数据写入 extract.yaml 文件: {'msg': '您操作过于频繁，请稍后再试试！'}
+21:00:58 -- INFO -- assert_util.py -- 开始执行 equals 断言用例
+21:00:58 -- INFO -- assert_util.py -- 成功将响应内容转换为 JSON 格式
+21:00:58 -- INFO -- assert_util.py -- 尝试获取响应对象的 status_code 属性值
+21:00:58 -- INFO -- assert_util.py -- 成功获取响应对象的 status_code 属性值: 200
+21:00:58 -- INFO -- assert_util.py -- 开始执行 equals 断言，预期值: 200，实际值: 200
+21:00:58 -- INFO -- assert_util.py -- 判断响应状态码为200 断言成功，预期值: 200，实际值: 200
+21:00:58 -- INFO -- conftest.py -- 测试用例 test_8kwq3[caseinfo0] 执行完毕
 
