@@ -1,5 +1,7 @@
 import copy
 import pymysql
+import pytest
+
 from config import setting
 from commons.logs_util import logger
 
@@ -140,4 +142,4 @@ class AssertUtil:
             except AssertionError as e:
                 error_msg = f"{msg} 断言失败，预期值：|{yq}|，实际值：|{sj_value}|"
                 logger.error(error_msg)
-                raise AssertionError(error_msg)
+                pytest.fail(error_msg) #记录断言失败信息
