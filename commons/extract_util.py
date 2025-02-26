@@ -49,7 +49,7 @@ class ExtractUtil:
             if lis and 0 <= index < len(lis):
                 self._update_yaml(var_name, lis[index])
             else:
-                self._log_error("提取数据失败，可能是提取结果为空或下标越界 \n")
+                self._log_error("提取数据失败，可能是提取结果为空或下标越界")
 
         except Exception as e:
             self._log_error(f"提取数据时发生未知错误: {e}")

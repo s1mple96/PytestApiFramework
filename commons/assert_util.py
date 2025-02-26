@@ -1,6 +1,7 @@
 import copy
 import pymysql
 import pytest
+import requests
 
 from config import setting
 from commons.logs_util import logger
@@ -52,19 +53,46 @@ class AssertUtil:
 
     def _get_response_value(self, res, sj):
         """
-        根据属性名获取响应对象的属性值
-        :param res: 响应对象
-        :param sj: 属性名
-        :return: 属性值
+        根据 sj 的情况查找响应对象中对应的值
+        :param res: 响应对象（可能是 requests 响应对象或字典）
+        :param sj: 要查找的值或键
+        :return: 对应的属性值或键，如果未找到则返回 sj 本身
         """
-        logger.info(f"尝试获取响应对象的 |{sj}| 属性值")
-        try:
-            value = getattr(res, sj)
-            logger.info(f"成功获取响应对象的 |{sj}| 属性值: |{value}|")
-            return value
-        except AttributeError:
-            logger.warning(f"响应对象没有 |{sj}| 属性，返回属性名本身")
-            return sj
+        logger.info(f"尝试查找响应对象中与 |{sj}| 对应的属性值或键")
+
+        # 将 sj 转换为字符串用于 hasattr 检查
+        sj_str = str(sj)
+
+        # 检查 sj 是否为 requests 响应对象的属性名
+        if isinstance(res, requests.models.Response) and hasattr(res, sj_str):
+            try:
+                # 尝试使用 getattr 获取响应对象的属性值
+                value = getattr(res, sj_str)
+                logger.info(f"成功获取响应对象的 |{sj_str}| 属性值: |{value}|")
+                return value
+            except AttributeError:
+                logger.warning(f"获取响应对象的 |{sj_str}| 属性时出错，继续查找字典中的值")
+
+        # 检查 res 是否为字典
+        if isinstance(res, dict):
+            # 遍历字典，查找值为 sj 的键，兼容字符串和数字比较
+            for key, value in res.items():
+                try:
+                    # 尝试将 value 转换为 sj 的类型进行比较
+                    if type(sj)(value) == sj:
+                        logger.info(f"成功找到值为 |{sj}| 对应的键: |{key}|，返回该键")
+                        return key
+                except (ValueError, TypeError):
+                    # 如果转换失败，直接比较原始值
+                    if value == sj:
+                        logger.info(f"成功找到值为 |{sj}| 对应的键: |{key}|，返回该键")
+                        return key
+            logger.warning(f"响应对象中没有值为 |{sj}| 对应的键，返回值本身")
+        else:
+            logger.warning("响应对象不是字典，无法进行查找，返回值本身")
+
+        return sj
+
 
     def _perform_assertion(self, assert_type, yq, sj_value, msg):
         """
@@ -142,4 +170,4 @@ class AssertUtil:
             except AssertionError as e:
                 error_msg = f"{msg} 断言失败，预期值：|{yq}|，实际值：|{sj_value}|"
                 logger.error(error_msg)
-                pytest.fail(error_msg) #记录断言失败信息
+                pytest.fail(error_msg)
