@@ -73,7 +73,7 @@ testcase_path = Path(__file__).parent
 #读取所有的testcases文件夹下面的所有yaml文件,存到列表[list]中
 # yaml_case_list = testcase_path.glob("**/*.yaml")
 #解决yaml从上到下执行问题
-yaml_case_list = list(testcase_path.glob("**/8kwq2.yaml"))#**/phpwind.yaml
+yaml_case_list = list(testcase_path.glob("**/*.yaml"))#**/phpwind.yaml
 yaml_case_list.sort()
 for yaml_path in yaml_case_list:
     # print("yaml_path:",yaml_path)
