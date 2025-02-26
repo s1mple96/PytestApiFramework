@@ -93,7 +93,6 @@ class AssertUtil:
 
         return sj
 
-
     def _perform_assertion(self, assert_type, yq, sj_value, msg):
         """
         执行断言操作

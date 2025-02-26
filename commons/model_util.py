@@ -9,7 +9,7 @@ class CaseInfo:
     story: str
     title: str
     request: dict
-    validate: dict
+    validate: dict = None
     # 选填
     extract: Optional[dict] = None
     parametrize: Optional[list] = None

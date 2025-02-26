@@ -43,7 +43,12 @@ def stand_case_flow(case_obj: CaseInfo):
         if case_obj.validate:
             perform_assertions(response, case_obj.validate, extract_util, assert_util)
         else:
-            logger.info("此用例没有断言！")
+            logger.info(f"用例 {case_obj.title} 未配置显式断言，将执行默认的 HTTP 状态码为 200 的断言检查。")
+            # 检查 HTTP 响应状态码是否为 200
+            if response.status_code == 200:
+                logger.info(f"请求 {case_obj.title} 的 HTTP 响应状态码为 200，请求成功。")
+            else:
+                logger.error(f"请求 {case_obj.title} 的 HTTP 响应状态码为 {response.status_code}，请求失败。")
 
         return response
 
