@@ -17,6 +17,8 @@ api_frame/
 │ ├── yaml_util.py # YAML 文件处理工具类
 │ ├── ddt_util.py # 数据驱动处理模块
 │ └── main_util.py # 用例执行流程模块
+├── hotload/ # 热部署文件目录
+│ └── debug_talk.py/ #通过自定义函数，轻松实现接口签名、加解密等自定义功能
 ├── config/ # 配置文件目录
 │ └── setting.py # 配置信息，如数据库连接配置、接口地址等
 ├── reports/ # 测试报告生成目录
